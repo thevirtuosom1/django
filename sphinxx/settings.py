@@ -80,24 +80,23 @@ WSGI_APPLICATION = 'sphinxx.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+if DEBUG == True: 
+        DATABASES = {
+            'default': {
 
-DATABASES = {
-    'default': {
+                'ENGINE'   : 'django.db.backends.postgresql',
+                'NAME'     : 'sphinxproject',
+                'USER'     : 'postgres',
+                'PASSWORD' : '1456321',
+                'HOST'     : 'localhost',
 
-        'ENGINE'   : 'django.db.backends.postgresql',
-        'NAME'     : 'sphinxproject',
-        'USER'     : 'postgres',
-        'PASSWORD' : '1456321',
-        'HOST'     : 'localhost',
-
-        #'ENGINE': 'django.db.backends.sqlite3',  old
-        #'NAME': BASE_DIR / 'db.sqlite3',         old
-    }
-}
-
-import dj_database_url
-
-DATABASES['default'] = dj_database_url.parse('postgres://ddjfaerkfmtgqr:8479fc77504e6e2b486523d0be02744cd198519a16dc91bf603d0991079cb11f@ec2-54-159-107-189.compute-1.amazonaws.com:5432/d82tto6oitp2nb', conn_max_age=600)
+                #'ENGINE': 'django.db.backends.sqlite3',  old
+                #'NAME': BASE_DIR / 'db.sqlite3',         old
+            }
+        }
+elif DEBUG == False:
+        import dj_database_url
+        DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
