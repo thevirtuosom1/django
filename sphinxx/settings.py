@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '=4bq97l0ich#23z3q^pk8*)$3ci@v$fth)&hmcp^5rmo6m##h9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://sphinxdjango.herokuapp.com','.sphinxdjango.herokuapp.com','www.sphinxdjango.herokuapp.com','.localhost','127.0.0.1']
 
