@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '=4bq97l0ich#23z3q^pk8*)$3ci@v$fth)&hmcp^5rmo6m##h9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://sphinxdjango.herokuapp.com','.sphinxdjango.herokuapp.com','www.sphinxdjango.herokuapp.com','.localhost','127.0.0.1']
 
@@ -85,7 +85,7 @@ DATABASES = {
     'default': {
 
         'ENGINE'   : 'django.db.backends.postgresql',
-        'NAME'     : 'sphinxpro',
+        'NAME'     : 'sphinxproject',
         'USER'     : 'postgres',
         'PASSWORD' : '1456321',
         'HOST'     : 'localhost',
@@ -139,7 +139,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 
 MEDIA_URL='/media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_ROOT=os.path.join(BASE_DIR,'Mediaa')
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
