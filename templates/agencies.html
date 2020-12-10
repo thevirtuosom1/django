@@ -1,0 +1,179 @@
+{%load static%}
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<!--<link rel="shortcut icon" href="{%static 'img/fav.png' %}">-->
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>4S-Sphinx</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="{%static 'css/linearicons.css' %}">
+			<link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
+			<link rel="stylesheet" href="{%static 'css/bootstrap.css' %}">
+			<link rel="stylesheet" href="{%static 'css/magnific-popup.css' %}">
+			<link rel="stylesheet" href="{%static 'css/nice-select.css' %}">			
+			<link rel="stylesheet" href="{%static 'css/animate.min.css' %}">
+			<link rel="stylesheet" href="{%static 'css/owl.carousel.css' %}">
+			<link rel="stylesheet" href="{%static 'css/main.css' %}">
+		</head>
+		<body>
+
+			  <header id="header" id="home">
+			  	<div class="container header-top">
+			  		<div class="row">
+				  		<div class="col-6 top-head-left">				  			
+				  			<ul>
+		  						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-behance"></i></a></li>
+				  			</ul>
+				  		</div>
+				  		<div class="col-6 top-head-right">
+				  			<ul>
+				  				<li><a href="tel:+880 012 3654 896"><span>(+202) 2272 3276 / (+202) 2275 0010</span> <span class="lnr lnr-phone-handset"></span></a></li>
+				  				<!-- <li><a href="#">Register / Login</a></li> -->
+				  			</ul>
+				  		</div>			  			
+			  		</div>
+			  	</div>
+			  	<hr>
+			    <div class="container">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="index.html"><img src="{%static 'img/logo.png' %}" alt="" title="" /></a>
+				      </div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="/">Home</a></li>
+				          <li><a href="/about">About Us</a></li>
+				          <li><a href="/agencies">Agencies</a></li>
+				          <li><a href="/prices">prices</a></li>
+				          <li><a href="/contact">Contact</a></li>
+				            <ul>
+				            	
+				              <li><a href="blog-single.html">blog Single</a></li>
+				              <li><a href="elements.html">Elements</a></li>
+				            </ul>
+				          </li>			          
+				        </ul>
+				      </nav><!-- #nav-menu-container -->		    		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Agencies				
+							</h1>	
+							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="/agencies"> Agencies</a></p>
+						</div>											
+					</div>
+				</div>
+			</section>
+			<!-- End banner Area -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="blog-area section-gap" id="blog">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Our Experience</h1>
+								<p>4S-Sphinx was founded in 1991 by Eng. Sayed Abdel Maksoud. Back then, he started it as a firm specialized in the supply and installation of closed circuit television systems. Right now, 4SSphinx is considered one of Egypt's leading companies in the field of security and surveillance systems. Our activities cover retail, commercial, and industrial solutions for projects of any size.</p>
+									<br>
+								<h1 class="mb-10"> Our Success Partners </h1>
+							</div>
+						</div>
+					</div>					
+					<div class="row">
+						<!--
+						<div class="col-lg-3 col-md-6 single-blog">
+							<div class="thumb">
+								<img class="" src="{%static 'img/b1.jpg' %}" alt="" width="262" height="180">								
+							</div>
+							<p class="date">10 Jan 2018</p>
+							<a href="blog-single.html"><h4>Addiction When Gambling
+							Becomes A Problem</h4></a>
+							<p>
+								inappropriate behavior ipsum dolor sit amet, consectetur.
+							</p>
+							<div class="meta-bottom d-flex justify-content-between">
+								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+							</div>								
+						</div>
+						-->
+
+						{%for c in client%}
+						<div class="col-lg-3 col-md-6 single-blog">
+							<div class="thumb">
+								<img class="" src="{{c.img.url}}" alt="" width="262"  height="180">						<!--class was img-fluid-->
+							</div>
+							<!--<p class="date">10 Jan 2018</p>
+							
+							<a href="blog-single.html"><h4>Addiction When Gambling
+							Becomes A Problem</h4></a>
+							<p>
+								inappropriate behavior ipsum dolor sit amet, consectetur.
+							</p>
+							<div class="meta-bottom d-flex justify-content-between">
+								<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+								<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+							</div>	-->								
+						</div>	
+					    {%endfor%}
+					</div>
+				</div>	
+			</section>
+
+			<script src="{%static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="{%static 'js/vendor/bootstrap.min.js' %}"></script>			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="{%static 'js/easing.min.js' %}"></script>			
+			<script src="{%static 'js/hoverIntent.js' %}"></script>
+			<script src="{%static 'js/superfish.min.js' %}"></script>	
+			<script src="{%static 'js/jquery.ajaxchimp.min.js' %}"></script>
+			<script src="{%static 'js/jquery.magnific-popup.min.js' %}"></script>	
+			<script src="{%static 'js/owl.carousel.min.js' %}"></script>			
+			<script src="{%static 'js/jquery.sticky.js' %}"></script>
+			<script src="{%static 'js/jquery.nice-select.min.js' %}"></script>	
+			<script src="{%static 'js/waypoints.min.js' %}"></script>
+			<script src="{%static 'js/jquery.counterup.min.js' %}"></script>				
+			<script src="{%static 'js/parallax.min.js' %}"></script>		
+			<script src="{%static 'js/mail-script.js' %}"></script>	
+			<script src="{%static 'js/main.js' %}"></script>	
+		</body>
+	</html>			
