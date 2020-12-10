@@ -88,7 +88,7 @@ DATABASES = {
         'NAME'     : 'sphinxproject',
         'USER'     : 'postgres',
         'PASSWORD' : '1456321',
-        'HOST'     : 'localhost',
+        'HOST'     : 'postgres://ddjfaerkfmtgqr:8479fc77504e6e2b486523d0be02744cd198519a16dc91bf603d0991079cb11f@ec2-54-159-107-189.compute-1.amazonaws.com:5432/d82tto6oitp2nb',
 
         #'ENGINE': 'django.db.backends.sqlite3',  old
         #'NAME': BASE_DIR / 'db.sqlite3',         old
