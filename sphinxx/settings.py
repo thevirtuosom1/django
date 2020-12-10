@@ -85,7 +85,6 @@ DATABASES = {
     'default': {
 
         'ENGINE'   : 'django.db.backends.postgresql',
-        'port'     : '5432'
         'NAME'     : 'd82tto6oitp2nb',                              # 'sphinxproject',
         'USER'     : 'ddjfaerkfmtgqr' ,             #   'postgres',
         'PASSWORD' : '8479fc77504e6e2b486523d0be02744cd198519a16dc91bf603d0991079cb11f' ,   #'1456321',
