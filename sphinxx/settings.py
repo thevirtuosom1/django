@@ -96,6 +96,8 @@ DATABASES = {
         #'NAME': BASE_DIR / 'db.sqlite3',         old
     }
 }
+#import dj_database_url
+    #DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)   
 
 #import dj_database_url
 #DATABASES = {
@@ -145,7 +147,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 
 MEDIA_URL='/media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'Mediaa')
+MEDIA_ROOT=os.path.join(BASE_DIR,'staticfiles/media')
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
